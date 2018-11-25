@@ -34,4 +34,27 @@ nav {
     font-size: 32px;
     margin-bottom: 0;
   }
+  .extremes {
+    h3 {
+      text-align: center;
+    }
+    .temperatura-meritev {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .temperatura-meritev-item {
+
+        strong {
+          margin-right: 5px;
+        }
+        .datafield {
+
+        }
+        &:last-child {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
 }

@@ -19,14 +19,37 @@
             <span data-minutes="10080" class="minutes-setting">1 teden</span><span class="divider">-</span>
             <span data-minutes="20160" class="minutes-setting">2 tedna</span>
         </nav>
-        <div class="vlaga meritev">
-            <h2 class="test">Vlaga</h2>
-            <div id="graf-vlaga"></div>
-        </div>
 
         <div class="temperatura meritev">
             <h2>Temperatura</h2>
             <div id="graf-temperatura"></div>
+
+            <div class="extremes">
+                <h3>Notranja temperatura</h3>
+                <div class="temperatura-meritev">
+                    <div class="temperatura-meritev-item">
+                        <strong>Maksimalna:</strong><span class="datafield" id="not_max_temp"></span><span>°C</span>
+                    </div>
+                    <div class="temperatura-meritev-item">
+                        <strong>Minimalna:</strong><span class="datafield" id="not_min_temp"></span><span>°C</span>
+                    </div>
+                </div>
+
+                <h3>Zunanja temperatura</h3>
+                <div class="temperatura-meritev">
+                    <div class="temperatura-meritev-item">
+                        <strong>Maksimalna:</strong><span class="datafield" id="zun_max_temp"></span><span>°C</span>
+                    </div>
+                    <div class="temperatura-meritev-item">
+                        <strong>Minimalna:</strong><span class="datafield" id="zun_min_temp"></span><span>°C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="vlaga meritev">
+            <h2 class="test">Vlaga</h2>
+            <div id="graf-vlaga"></div>
         </div>
 
         <div class="tlak meritev">

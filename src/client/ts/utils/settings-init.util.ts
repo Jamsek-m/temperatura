@@ -34,6 +34,7 @@ export class SettingsInitUtil {
         localStorage.setItem(LOCAL_STORAGE_MINUTES_KEY, target.getAttribute("data-minutes"));
         SettingsInitUtil.toggleChosenMinutes(target);
         DataUtil.getDataAndDrawGraphs();
+        DataUtil.getExtremesAndDisplay();
     }
 
 

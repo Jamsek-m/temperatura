@@ -2,6 +2,7 @@ import {NextFunction, Request, Response, Router} from "express";
 import {ZapisService} from "../services/zapis.service";
 import {Zapis} from "../dto/zapis.dto";
 import {ZapisMapper} from "../mappers/zapis.mapper";
+import {Extremes} from "../dto/extremes.dto";
 
 class ApiController {
     public router: Router;
@@ -14,12 +15,24 @@ class ApiController {
     private init(): void {
         this.router.get("/", this.getAllZapisi);
         this.router.post("/", this.createZapis);
+        this.router.get("/extremes", this.getExtrems);
     }
 
     private getAllZapisi(req: Request, res: Response, next: NextFunction): void {
         ZapisService.getAll(req.query["minutes"]).then(
             (zapisi: Zapis[]) => {
                 return res.status(200).json(zapisi);
+            },
+            (error: Error) => {
+                return res.status(500).json({message: "Server error!"});
+            }
+        )
+    }
+
+    private getExtrems(req: Request, res: Response, next: NextFunction): void {
+        ZapisService.getExtrems(req.query["minutes"]).then(
+            (extrem: Extremes) => {
+                return res.status(200).json(extrem);
             },
             (error: Error) => {
                 return res.status(500).json({message: "Server error!"});

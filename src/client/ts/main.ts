@@ -7,3 +7,4 @@ import "../scss/stili.scss";
 GraphService.initializeGoogleCharts();
 SettingsInitUtil.initializeEventListeners("minutes-setting");
 DataUtil.getDataAndDrawGraphs();
+DataUtil.getExtremesAndDisplay();
