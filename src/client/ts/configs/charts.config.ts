@@ -8,11 +8,11 @@ export const chartsConfig: ChartsConfig = {
             height: 300,
             width: ScreenUtil.getCalculatedGraphWidth(),
             vAxis: {
-                minValue: 0,
+                minValue: 20,
                 maxValue: 100
             },
             hAxis: {
-                format: "dd.MM.yy HH:mm:ss"
+                format: "dd.MM.yy HH:mm"
             },
             legend: {
                 position: "none"
@@ -32,7 +32,7 @@ export const chartsConfig: ChartsConfig = {
                 position: "none"
             },
             hAxis: {
-                format: "dd.MM.yy HH:mm:ss"
+                format: "dd.MM.yy HH:mm"
             }
         },
         headers: [
@@ -47,11 +47,11 @@ export const chartsConfig: ChartsConfig = {
             height: 300,
             width: ScreenUtil.getCalculatedGraphWidth(),
             vAxis: {
-                minValue: 970,
+                minValue: 980,
                 maxValue: 1040
             },
             hAxis: {
-                format: "dd.MM.yy HH:mm:ss"
+                format: "dd.MM.yy HH:mm"
             },
             legend: {
                 position: "none"

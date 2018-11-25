@@ -3,23 +3,36 @@
     <head>
         <meta charset="UTF-8">
         <title>Index</title>
+        <link rel="stylesheet" href="/stili.css"/>
     </head>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="/vendors~main.bundle.js"></script>
-    <style>
-        h2 {
-            text-align: center;
-        }
-    </style>
     <body>
-        <h2>Vlaga</h2>
-        <div id="graf-vlaga"></div>
+        <nav>
+            Prikaži za obdobje:
+            <span data-minutes="30" class="minutes-setting">30 min</span><span class="divider">-</span>
+            <span data-minutes="60" class="minutes-setting">1h</span><span class="divider">-</span>
+            <span data-minutes="240" class="minutes-setting">4h</span><span class="divider">-</span>
+            <span data-minutes="720" class="minutes-setting">12h</span><span class="divider">-</span>
+            <span data-minutes="1440" class="minutes-setting">1 dan</span><span class="divider">-</span>
+            <span data-minutes="4320" class="minutes-setting">3 dni</span><span class="divider">-</span>
+            <span data-minutes="10080" class="minutes-setting">1 teden</span><span class="divider">-</span>
+            <span data-minutes="20160" class="minutes-setting">2 tedna</span>
+        </nav>
+        <div class="vlaga meritev">
+            <h2 class="test">Vlaga</h2>
+            <div id="graf-vlaga"></div>
+        </div>
 
-        <h2>Temperatura</h2>
-        <div id="graf-temperatura"></div>
+        <div class="temperatura meritev">
+            <h2>Temperatura</h2>
+            <div id="graf-temperatura"></div>
+        </div>
 
-        <h2>Tlak</h2>
-        <div id="graf-tlak"></div>
+        <div class="tlak meritev">
+            <h2>Tlak</h2>
+            <div id="graf-tlak"></div>
+        </div>
     </body>
     <script src="/main.bundle.js"></script>
 </html>
