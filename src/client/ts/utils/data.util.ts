@@ -48,6 +48,9 @@ export class DataUtil {
     private static setText(text: string | number | boolean, elementId: string): void {
         const element = document.getElementById(elementId);
         element.innerHTML = "";
+        if (!text) {
+            text = "n/a";
+        }
         element.appendChild(document.createTextNode(text.toString()));
     }
 
